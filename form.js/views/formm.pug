@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        script(src="./indux.js") 
+        // Inline script for form handling
+        //- script.
+        //-     document.addEventListener('DOMContentLoaded', function() {
+        //-         const formm = document.querySelector('form');
+        //-         formm.addEventListener('submit', function(e) {
+        //-             e.preventDefault(); // Prevent the default form submission
+        //-             const formData = new FormData(formm);
+        //-             fetch('/g', {
+        //-                 method: 'POST',
+        //-                 body: formData
+        //-             })
+        //-             .then(response => response.text()) // Expect a text response
+        //-             .then(data => {
+        //-                 console.log('Response from server:', data); // Log the server response
+        //-             })
+        //-             .catch(error => console.error('Error:', error));
+        //-         });
+        //-     });
+    body
+        h1 Submit Your Form
+        form(action="/g", method="post") //  username
+
+            input(type="text", name="email", placeholder="Enter your emailid")
+            br
+            input(type="text",name="password",placeholder="enter your password")
+            input(type="submit", value="Submit")
+
+        //-      h1 Submit Your Form
+        //- form(action="/g", method="post") // Ensure this matches your server's route
+        //-    div 
+        //-    label(for="say") say
+        //-    input(name="say" value="hi")
+        //-    br
+        //-    div 
+        //-    label(for="to") say
+        //-    input(name="to" value ="express forms") 
+        //-    br
+        //-    button( button="" type="submit")  hello
+
+
